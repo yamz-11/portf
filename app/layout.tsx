@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,9 +12,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: "Nama Kamu — Web Developer",
-  description: "Portfolio Nama Kamu: proyek, tentang, dan kontak.",
+  title: "Muhammad Tyler J. R. Wiratama — Full-Stack Developer",
+  description:
+    "Portfolio Muhammad Tyler J. Riches Wiratama (Yama) — Full-Stack Developer spesialis aplikasi web modern dengan Next.js, TypeScript, Tailwind CSS, dan Supabase.",
+  keywords: [
+    "Muhammad Tyler Wiratama",
+    "Yama",
+    "Full-Stack Developer",
+    "Web Developer Indonesia",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Supabase",
+  ],
+  authors: [{ name: "Muhammad Tyler J. Riches Wiratama" }],
 };
 
 export default function RootLayout({

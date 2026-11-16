@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="50%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1e40af" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background with subtle pattern -->
+  <rect width="400" height="400" fill="url(#bgGrad)"/>
+  
+  <circle cx="200" cy="200" r="160" fill="#ffffff" opacity="0.6"/>
+  <circle cx="200" cy="200" r="130" fill="url(#bgGrad)" opacity="0.5"/>
+
+  <!-- Stylized Modern Developer Monogram / Portrait Avatar -->
+  <g filter="url(#shadow)">
+    <!-- Base Body Silhouette -->
+    <path d="M120 330 C120 270, 155 240, 200 240 C245 240, 280 270, 280 330 Z" fill="url(#primaryGrad)"/>
+    <!-- Head -->
+    <circle cx="200" cy="170" r="55" fill="url(#primaryGrad)"/>
+    
+    <!-- Modern Tech Accent Circle Badge -->
+    <circle cx="260" cy="140" r="14" fill="#60a5fa" stroke="#ffffff" stroke-width="3"/>
+  </g>
+
+  <!-- Clean Tech Emblem text -->
+  <text x="200" y="375" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1e40af" letter-spacing="3">TYLER WIRATAMA</text>
+</svg>
