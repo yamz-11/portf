@@ -270,3 +270,95 @@ body {
   text-align: center;
   box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.08);
 }
+
+/* Print / Cetak CV Utilities & Styles */
+.print-only {
+  display: none !important;
+}
+
+@media print {
+  @page {
+    margin: 1.2cm 1.5cm;
+    size: A4 portrait;
+  }
+
+  html,
+  body {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #0f172a !important;
+    font-size: 10pt !important;
+    line-height: 1.45 !important;
+    min-height: auto !important;
+  }
+
+  /* Hide navigation, buttons, and interactive UI */
+  .no-print,
+  header,
+  nav,
+  button,
+  .filter-bar,
+  footer a,
+  footer span {
+    display: none !important;
+  }
+
+  /* Show print-only information */
+  .print-only {
+    display: block !important;
+  }
+
+  .container-custom {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Clean cards for paper printing */
+  .project-card,
+  .cert-card {
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 0.5rem !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 0.75rem !important;
+    padding: 0.85rem !important;
+  }
+
+  .cert-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  section {
+    break-inside: auto;
+    page-break-inside: auto;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .tag-badge {
+    background: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #334155 !important;
+    font-size: 7.5pt !important;
+    padding: 0.15rem 0.5rem !important;
+  }
+
+  a {
+    color: #0f172a !important;
+    text-decoration: none !important;
+  }
+}
+

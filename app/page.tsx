@@ -1,6 +1,7 @@
 import Image from "next/image";
-import CopyEmailButton from "./components/CopyEmailButton";
+import Link from "next/link";
 import ProjectsSection, { Project } from "./components/ProjectsSection";
+import PrintButton from "./components/PrintButton";
 
 const projects: Project[] = [
   {
@@ -103,6 +104,7 @@ export default function Home() {
     <div style={{ minHeight: "100vh", backgroundColor: "#f8fafc", color: "#0f172a" }}>
       {/* Sticky Header */}
       <header
+        className="no-print"
         style={{
           position: "sticky",
           top: 0,
@@ -165,9 +167,17 @@ export default function Home() {
             ))}
           </nav>
 
-          <a href="#contact" className="btn-blue" style={{ padding: "0.45rem 1.1rem", fontSize: "0.8rem" }}>
-            Hubungi
-          </a>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            <PrintButton
+              style={{
+                padding: "0.45rem 0.9rem",
+                fontSize: "0.8rem",
+              }}
+            />
+            <a href="#contact" className="btn-blue" style={{ padding: "0.45rem 1.1rem", fontSize: "0.8rem" }}>
+              Hubungi
+            </a>
+          </div>
         </div>
       </header>
 
@@ -187,15 +197,6 @@ export default function Home() {
           }}
         >
           <div style={{ flex: "1 1 340px", maxWidth: "560px" }}>
-            {/* Status Pill */}
-            {/* <div className="pill-status" style={{ marginBottom: "1.25rem" }}>
-              <span className="pulse-dot">
-                <span className="pulse-dot-ping" />
-                <span className="pulse-dot-core" />
-              </span>
-              <span>Tersedia untuk proyek freelance & kolaborasi baru</span>
-            </div> */}
-
             <p
               style={{
                 fontSize: "0.75rem",
@@ -219,9 +220,9 @@ export default function Home() {
                 margin: "0 0 1rem 0",
               }}
             >
-              {/* Halo, saya{" "} */}
+              Halo, saya{" "}
               <span style={{ color: "#2563eb" }}>
-                Muhammad Tyler J. Riches Wiratama
+                Muhammad Tyler J. R. Wiratama
               </span>
             </h1>
 
@@ -243,13 +244,13 @@ export default function Home() {
             </p>
 
             {/* Quick Actions */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "0.75rem" }}>
+            <div className="no-print" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "0.75rem" }}>
               <a href="#projects" className="btn-blue">
                 <span>Lihat Proyek</span>
                 <span style={{ fontSize: "1rem", lineHeight: 1 }}>↓</span>
               </a>
 
-              <CopyEmailButton email={email} className="btn-white" />
+              <PrintButton />
 
               <a
                 href="https://github.com/yamz-11"
@@ -259,6 +260,24 @@ export default function Home() {
               >
                 GitHub ↗
               </a>
+            </div>
+
+            {/* Print-Only Contact Info */}
+            <div
+              className="print-only"
+              style={{
+                marginTop: "1.25rem",
+                paddingTop: "0.75rem",
+                borderTop: "1px solid #cbd5e1",
+                fontSize: "0.85rem",
+                color: "#334155",
+              }}
+            >
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "1.25rem" }}>
+                <span><strong>Email:</strong> {email}</span>
+                <span><strong>GitHub:</strong> github.com/yamz-11</span>
+                <span><strong>Lokasi:</strong> Indonesia</span>
+              </div>
             </div>
           </div>
 
@@ -290,8 +309,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Highlights Row (4 clean columns) */}
-        <section style={{ paddingBottom: "2.5rem", paddingTop: "0.5rem" }}>
+        {/* Highlights Row */}
+        <section className="no-print" style={{ paddingBottom: "2.5rem", paddingTop: "0.5rem" }}>
           <div className="stat-row">
             <div className="stat-card">
               <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "#2563eb" }}>7+</span>
@@ -389,24 +408,11 @@ export default function Home() {
             >
               Hit Me Up!
             </h2>
-            {/* <p
-              style={{
-                fontSize: "0.95rem",
-                lineHeight: 1.6,
-                color: "#64748b",
-                maxWidth: "440px",
-                margin: "0 auto 1.5rem auto",
-              }}
-            >
-              Saya terbuka untuk proyek freelance, kolaborasi aplikasi, maupun peluang kerja.
-            </p> */}
 
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "0.75rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "0.75rem", marginTop: "1rem" }}>
               <a href={`mailto:${email}`} className="btn-blue" style={{ padding: "0.65rem 1.75rem" }}>
                 {email}
               </a>
-
-              <CopyEmailButton email={email} className="btn-white" style={{ padding: "0.65rem 1.5rem" }} />
             </div>
           </div>
         </section>
@@ -414,6 +420,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer
+        className="no-print"
         style={{
           borderTop: "1px solid #e2e8f0",
           backgroundColor: "#ffffff",
@@ -435,6 +442,13 @@ export default function Home() {
         >
           <p style={{ margin: 0 }}>© 2026 Muhammad Tyler J. R. Wiratama. All rights reserved.</p>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+            <Link
+              href="/cv"
+              style={{ color: "#2563eb", textDecoration: "none", fontWeight: 600 }}
+            >
+              Halaman CV ↗
+            </Link>
+            <span>·</span>
             <a
               href="https://github.com/yamz-11"
               target="_blank"

@@ -41,7 +41,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
         </div>
 
         {/* Filter Bar */}
-        <div className="filter-bar">
+        <div className="filter-bar no-print">
           {(["Semua", "Web App", "Sistem & Tools"] as const).map((tab) => (
             <button
               key={tab}
