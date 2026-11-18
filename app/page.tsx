@@ -221,24 +221,6 @@ export default function Home() {
                 GitHub ↗
               </a>
             </div>
-
-            {/* Print-Only Contact Info */}
-            <div
-              className="print-only"
-              style={{
-                marginTop: "1.25rem",
-                paddingTop: "0.75rem",
-                borderTop: "1px solid #cbd5e1",
-                fontSize: "0.85rem",
-                color: "#334155",
-              }}
-            >
-              {/* <div style={{ display: "flex", flexWrap: "wrap", gap: "1.25rem" }}>
-                <span><strong>Email:</strong> {email}</span>
-                <span><strong>GitHub:</strong> github.com/yamz-11</span>
-                <span><strong>Lokasi:</strong> Indonesia</span>
-              </div> */}
-            </div>
           </div>
 
           {/* Profile Avatar Frame */}

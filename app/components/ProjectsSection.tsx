@@ -20,7 +20,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
     activeTab === "Semua" ? projects : projects.filter((p) => p.category === activeTab);
 
   return (
-    <section id="projects" style={{ scrollMarginTop: "5rem", paddingTop: "2rem", paddingBottom: "3rem" }}>
+    <section id="projects" style={{ scrollMarginTop: "5rem", paddingTop: "1rem", paddingBottom: "2.5rem" }}>
       <div
         style={{
           display: "flex",
@@ -28,7 +28,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
           alignItems: "flex-end",
           flexWrap: "wrap",
           gap: "1rem",
-          marginBottom: "1.5rem",
+          marginBottom: "1rem",
         }}
       >
         <div style={{ display: "flex", alignItems: "baseline", gap: "0.75rem" }}>
