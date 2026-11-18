@@ -119,7 +119,7 @@ export default function Home() {
           style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
+            gap: "2.5rem",
             paddingTop: "1rem",
             paddingBottom: "1rem",
           }}
@@ -166,18 +166,6 @@ export default function Home() {
               </a>
             ))}
           </nav>
-
-          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-            <PrintButton
-              style={{
-                padding: "0.45rem 0.9rem",
-                fontSize: "0.8rem",
-              }}
-            />
-            <a href="#contact" className="btn-blue" style={{ padding: "0.45rem 1.1rem", fontSize: "0.8rem" }}>
-              Hubungi
-            </a>
-          </div>
         </div>
       </header>
 
@@ -222,7 +210,7 @@ export default function Home() {
             >
               Halo, saya{" "}
               <span style={{ color: "#2563eb" }}>
-                Muhammad Tyler J. R. Wiratama
+                Athallariq Tyler J. Riches Wiratama
               </span>
             </h1>
 
@@ -273,11 +261,11 @@ export default function Home() {
                 color: "#334155",
               }}
             >
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "1.25rem" }}>
+              {/* <div style={{ display: "flex", flexWrap: "wrap", gap: "1.25rem" }}>
                 <span><strong>Email:</strong> {email}</span>
                 <span><strong>GitHub:</strong> github.com/yamz-11</span>
                 <span><strong>Lokasi:</strong> Indonesia</span>
-              </div>
+              </div> */}
             </div>
           </div>
 
