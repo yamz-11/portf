@@ -36,7 +36,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
             01
           </span>
           <h2 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#0f172a", margin: 0, letterSpacing: "-0.02em" }}>
-            Koleksi Proyek
+            Projects
           </h2>
         </div>
 

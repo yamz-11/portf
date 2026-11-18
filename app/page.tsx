@@ -10,7 +10,7 @@ const projects: Project[] = [
     desc: "Sistem Point of Sales (POS) multi-cabang modern dengan kapabilitas offline-first dan sinkronisasi otomatis saat online. Mengelola transaksi kasir, stok inventaris, dan arus kas secara real-time.",
     tags: ["Next.js", "Tailwind CSS", "Supabase", "Offline-First"],
     href: "https://kasiroff.vercel.app",
-    year: "2026",
+    year: "2024",
     featured: true,
   },
   {
@@ -19,7 +19,7 @@ const projects: Project[] = [
     desc: "Platform dashboard analitik trading tingkat lanjut. Dilengkapi grafik interaktif, kalender kalkulasi P&L, manajemen riwayat trade, jurnal harian, dan evaluasi performa mingguan.",
     tags: ["Next.js", "Tailwind CSS", "Supabase", "Analytics"],
     href: "https://yamztrades.netlify.app",
-    year: "2026",
+    year: "2024",
     featured: true,
   },
   {
@@ -28,7 +28,7 @@ const projects: Project[] = [
     desc: "Portal dokumentasi dan manajemen endpoint RESTful API terintegrasi untuk kebutuhan sistem rumah sakit.",
     tags: ["Next.js", "Tailwind CSS", "REST API"],
     href: "https://doc-api-rsma.netlify.app/",
-    year: "2026",
+    year: "2024",
   },
   {
     title: "Task Manager IT",
@@ -36,7 +36,7 @@ const projects: Project[] = [
     desc: "Aplikasi pencatatan dan pelaporan kegiatan tim IT rumah sakit dengan alur pelacakan status pekerjaan terpusat.",
     tags: ["Next.js", "MySQL", "Tailwind CSS"],
     href: "https://taskmanager-itrsma.netlify.app/",
-    year: "2026",
+    year: "2024",
   },
   {
     title: "Jadwal Piket & Shift",
@@ -44,7 +44,7 @@ const projects: Project[] = [
     desc: "Sistem otomasi pengaturan jadwal shift kerja tim yang praktis, transparan, dan mudah dipantau secara berkala.",
     tags: ["Next.js", "Tailwind CSS", "Supabase"],
     href: "https://yamztrades.netlify.app",
-    year: "2026",
+    year: "2024",
   },
   {
     title: "Simple Perpustakaan",
@@ -92,7 +92,7 @@ const certificates = [
 
 const nav = [
   { label: "Tentang", href: "#about" },
-  { label: "Proyek", href: "#projects" },
+  { label: "Projects", href: "#projects" },
   { label: "Sertifikat", href: "#certificates" },
   { label: "Kontak", href: "#contact" },
 ];
@@ -129,7 +129,7 @@ export default function Home() {
               flexShrink: 0,
             }}
           >
-            <span>Yama</span>
+            <span>YJR</span>
             <span
               style={{
                 display: "inline-block",
@@ -179,9 +179,9 @@ export default function Home() {
             </p> */}
 
             <h1 className="hero-title">
-              Halo, saya{" "}
+              Halo, Saya{" "}
               <span style={{ color: "#2563eb" }}>
-                Athallariq Tyler J. Riches Wiratama
+                Athallariq Wiratama
               </span>
             </h1>
 
@@ -193,19 +193,20 @@ export default function Home() {
                 margin: "0 0 1.5rem 0",
               }}
             >
-              Fokus merancang dan membangun aplikasi web modern yang cepat, terstruktur, dan
-              intuitif. Menguasai ekosistem{" "}
-              <strong style={{ color: "#0f172a", fontWeight: 600 }}>Next.js</strong>,{" "}
-              <strong style={{ color: "#0f172a", fontWeight: 600 }}>TypeScript</strong>,{" "}
+              Random kid yang sedang belajar {" "}
+              {/* Fokus merancang dan membangun aplikasi web modern yang cepat, terstruktur, dan
+              intuitif. Menguasai ekosistem{" "} */}
+              <strong style={{ color: "#0f172a", fontWeight: 600 }}>Teknologi Informasi</strong>,{" "}
+              {/* <strong style={{ color: "#0f172a", fontWeight: 600 }}>TypeScript</strong>,{" "}
               <strong style={{ color: "#0f172a", fontWeight: 600 }}>Tailwind CSS</strong>, dan
               arsitektur database cloud modern (<strong style={{ color: "#0f172a", fontWeight: 600 }}>Supabase</strong> /{" "}
-              <strong style={{ color: "#0f172a", fontWeight: 600 }}>MySQL</strong>).
+              <strong style={{ color: "#0f172a", fontWeight: 600 }}>MySQL</strong>). */}
             </p>
 
             {/* Quick Actions */}
             <div className="hero-actions no-print">
               <a href="#projects" className="btn-blue">
-                <span>Lihat Proyek</span>
+                <span>Lihat Projects</span>
                 <span style={{ fontSize: "1rem", lineHeight: 1 }}>↓</span>
               </a>
 
@@ -255,7 +256,7 @@ export default function Home() {
         </section>
 
         {/* Highlights Row */}
-        <section className="no-print" style={{ paddingBottom: "2.5rem", paddingTop: "0.5rem" }}>
+        {/* <section className="no-print" style={{ paddingBottom: "2.5rem", paddingTop: "0.5rem" }}>
           <div className="stat-row">
             <div className="stat-card">
               <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "#2563eb" }}>7+</span>
@@ -282,9 +283,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Koleksi Proyek */}
+        {/* Koleksi Project */}
         <ProjectsSection projects={projects} />
 
         {/* Sertifikasi */}
@@ -385,7 +386,7 @@ export default function Home() {
         }}
       >
         <div className="container-custom footer-inner">
-          <p style={{ margin: 0 }}>© 2026 Muhammad Tyler J. R. Wiratama. All rights reserved.</p>
+          <p style={{ margin: 0 }}>© 2026 YJR. All rights reserved.</p>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <Link
               href="/cv"
