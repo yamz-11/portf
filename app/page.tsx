@@ -71,22 +71,22 @@ const certificates = [
     title: "Sertifikasi Web Development",
     issuer: "Platform Pembelajaran Digital",
     year: "2025",
-    image: "/certificates/cert-1.jpg",
-    href: "/certificates/cert-1.jpg",
+    image: "",
+    href: "#",
   },
   {
     title: "Sertifikasi Database & Backend",
     issuer: "Institusi Pelatihan Teknologi",
     year: "2024",
-    image: "/certificates/cert-2.jpg",
-    href: "/certificates/cert-2.jpg",
+    image: "",
+    href: "#",
   },
   {
     title: "Sertifikasi Software Engineering",
     issuer: "Lembaga Sertifikasi Kompetensi",
     year: "2024",
-    image: "/certificates/cert-3.jpg",
-    href: "/certificates/cert-3.jpg",
+    image: "",
+    href: "#",
   },
 ];
 
@@ -114,16 +114,7 @@ export default function Home() {
           borderBottom: "1px solid #e2e8f0",
         }}
       >
-        <div
-          className="container-custom"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "2.5rem",
-            paddingTop: "1rem",
-            paddingBottom: "1rem",
-          }}
-        >
+        <div className="container-custom header-wrapper">
           <a
             href="#"
             style={{
@@ -135,6 +126,7 @@ export default function Home() {
               textDecoration: "none",
               color: "#0f172a",
               letterSpacing: "-0.025em",
+              flexShrink: 0,
             }}
           >
             <span>Yama</span>
@@ -149,7 +141,7 @@ export default function Home() {
             />
           </a>
 
-          <nav style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+          <nav className="header-nav">
             {nav.map((n) => (
               <a
                 key={n.href}
@@ -171,21 +163,9 @@ export default function Home() {
 
       <main className="container-custom" style={{ paddingTop: "2.5rem", paddingBottom: "4rem" }}>
         {/* Hero Section */}
-        <section
-          id="about"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "2.5rem",
-            paddingTop: "2rem",
-            paddingBottom: "2.5rem",
-            flexWrap: "wrap-reverse",
-          }}
-        >
-          <div style={{ flex: "1 1 340px", maxWidth: "560px" }}>
-            <p
+        <section id="about" className="hero-section">
+          <div className="hero-content">
+            {/* <p
               style={{
                 fontSize: "0.75rem",
                 fontWeight: 700,
@@ -196,18 +176,9 @@ export default function Home() {
               }}
             >
               Full-Stack Web Developer
-            </p>
+            </p> */}
 
-            <h1
-              style={{
-                fontSize: "2.5rem",
-                fontWeight: 800,
-                lineHeight: 1.15,
-                letterSpacing: "-0.03em",
-                color: "#0f172a",
-                margin: "0 0 1rem 0",
-              }}
-            >
+            <h1 className="hero-title">
               Halo, saya{" "}
               <span style={{ color: "#2563eb" }}>
                 Athallariq Tyler J. Riches Wiratama
@@ -232,7 +203,7 @@ export default function Home() {
             </p>
 
             {/* Quick Actions */}
-            <div className="no-print" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "0.75rem" }}>
+            <div className="hero-actions no-print">
               <a href="#projects" className="btn-blue">
                 <span>Lihat Proyek</span>
                 <span style={{ fontSize: "1rem", lineHeight: 1 }}>↓</span>
@@ -270,21 +241,7 @@ export default function Home() {
           </div>
 
           {/* Profile Avatar Frame */}
-          <div
-            style={{
-              position: "relative",
-              width: "220px",
-              height: "220px",
-              minWidth: "220px",
-              minHeight: "220px",
-              borderRadius: "1.5rem",
-              overflow: "hidden",
-              border: "1px solid #bfdbfe",
-              backgroundColor: "#ffffff",
-              boxShadow: "0 12px 28px -6px rgba(37, 99, 235, 0.15)",
-              margin: "0 auto",
-            }}
-          >
+          <div className="hero-avatar">
             <Image
               src="/avatar.svg"
               alt="Avatar Muhammad Tyler Wiratama"
@@ -350,14 +307,24 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="cert-card"
               >
-                <div style={{ position: "relative", width: "100%", aspectRatio: "4/3", backgroundColor: "#eff6ff", overflow: "hidden" }}>
-                  <Image
-                    src={c.image}
-                    alt={c.title}
-                    fill
-                    sizes="(min-width: 1024px) 270px, (min-width: 640px) 50vw, 100vw"
-                    style={{ objectFit: "cover" }}
-                  />
+                <div style={{ position: "relative", width: "100%", aspectRatio: "4/3", backgroundColor: "#f8fafc", borderBottom: "1px solid #e2e8f0", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                  {c.image ? (
+                    <Image
+                      src={c.image}
+                      alt={c.title}
+                      fill
+                      sizes="(min-width: 1024px) 270px, (min-width: 640px) 50vw, 100vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  ) : (
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", color: "#94a3b8" }}>
+                      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <rect width="18" height="14" x="3" y="5" rx="2" />
+                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        <circle cx="9" cy="9" r="2" />
+                      </svg>
+                    </div>
+                  )}
                 </div>
                 <div style={{ padding: "1.25rem" }}>
                   <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0f172a", margin: "0 0 0.35rem 0" }}>
@@ -417,17 +384,7 @@ export default function Home() {
           color: "#64748b",
         }}
       >
-        <div
-          className="container-custom"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "1rem",
-          }}
-        >
+        <div className="container-custom footer-inner">
           <p style={{ margin: 0 }}>© 2026 Muhammad Tyler J. R. Wiratama. All rights reserved.</p>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <Link

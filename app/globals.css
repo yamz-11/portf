@@ -194,9 +194,15 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .stat-row {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+@media (max-width: 380px) {
+  .stat-row {
+    grid-template-columns: 1fr;
   }
 }
 .stat-card {
@@ -269,6 +275,202 @@ body {
   padding: 3rem 1.5rem;
   text-align: center;
   box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.08);
+}
+
+/* ============================================================
+   Responsive Layout Classes (Mobile, Tablet, Desktop)
+   ============================================================ */
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+  flex-wrap: wrap-reverse;
+}
+
+.hero-content {
+  flex: 1 1 340px;
+  max-width: 560px;
+  min-width: 0;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  word-break: break-word;
+}
+
+.hero-avatar {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  min-width: 220px;
+  min-height: 220px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid #bfdbfe;
+  background-color: #ffffff;
+  box-shadow: 0 12px 28px -6px rgba(37, 99, 235, 0.15);
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Tablet Breakpoint (max-width: 768px) */
+@media (max-width: 768px) {
+  .header-wrapper {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .header-nav {
+    gap: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    font-size: 0.825rem;
+  }
+  .header-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-avatar {
+    width: 190px;
+    height: 190px;
+    min-width: 190px;
+    min-height: 190px;
+    border-radius: 1.25rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Mobile Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+  .container-custom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header-nav {
+    gap: 0.75rem;
+    font-size: 0.775rem;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+
+  .hero-avatar {
+    width: 160px;
+    height: 160px;
+    min-width: 160px;
+    min-height: 160px;
+    border-radius: 1.25rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn-blue,
+  .hero-actions .btn-white,
+  .hero-actions button,
+  .hero-actions a {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .filter-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .filter-btn-active,
+  .filter-btn-inactive {
+    flex: 1;
+    text-align: center;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .project-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Print / Cetak CV Utilities & Styles */
