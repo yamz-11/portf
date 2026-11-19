@@ -68,21 +68,21 @@ const projects: Project[] = [
 
 const certificates = [
   {
-    title: "Sertifikasi Web Development",
-    issuer: "Platform Pembelajaran Digital",
-    year: "2025",
+    title: "Sertifikasi Programmer",
+    issuer: "Lembaga Sertifikasi Kompetensi",
+    year: "2024 - 2026",
     image: "",
     href: "#",
   },
   {
-    title: "Sertifikasi Database & Backend",
+    title: "Sertifikasi",
     issuer: "Institusi Pelatihan Teknologi",
     year: "2024",
     image: "",
     href: "#",
   },
   {
-    title: "Sertifikasi Software Engineering",
+    title: "Sertifikasi ",
     issuer: "Lembaga Sertifikasi Kompetensi",
     year: "2024",
     image: "",
@@ -91,10 +91,10 @@ const certificates = [
 ];
 
 const nav = [
-  { label: "Tentang", href: "#about" },
+  { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "Sertifikat", href: "#certificates" },
-  { label: "Kontak", href: "#contact" },
+  { label: "Certificatest", href: "#certificates" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Home() {

@@ -19,9 +19,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Muhammad Tyler J. R. Wiratama — Full-Stack Developer",
+  title: "Yama J. Riches",
   description:
-    "Portfolio Muhammad Tyler J. Riches Wiratama (Yama) — Full-Stack Developer spesialis aplikasi web modern dengan Next.js, TypeScript, Tailwind CSS, dan Supabase.",
+    "Portfolioweb ",
   keywords: [
     "Muhammad Tyler Wiratama",
     "Yama",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Tailwind CSS",
     "Supabase",
   ],
-  authors: [{ name: "Muhammad Tyler J. Riches Wiratama" }],
+  authors: [{ name: "Athallariq Wiratama" }],
 };
 
 export default function RootLayout({
