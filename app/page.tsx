@@ -93,8 +93,7 @@ const certificates = [
 const nav = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "Certificatest", href: "#certificates" },
-  { label: "Contact", href: "#contact" },
+  { label: "Certificates", href: "#certificates" },
 ];
 
 export default function Home() {
@@ -217,8 +216,80 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-white"
+                title="GitHub"
               >
-                GitHub ↗
+                <span>GitHub</span>
+                <span style={{ fontSize: "0.85rem", opacity: 0.7 }}>↗</span>
+              </a>
+
+              <a
+                href={`mailto:${email}`}
+                className="btn-white"
+                title="Email"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span>Email</span>
+              </a>
+
+              <a
+                href="https://instagram.com/yama11z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-white"
+                title="Instagram"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+                <span>Instagram</span>
+              </a>
+
+              <a
+                href="https://facebook.com/Yamzed11/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-white"
+                title="Facebook"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+                <span>Facebook</span>
               </a>
             </div>
           </div>
@@ -320,38 +391,6 @@ export default function Home() {
                 </div>
               </a>
             ))}
-          </div>
-        </section>
-
-        {/* Kontak Section */}
-        <section id="contact" style={{ scrollMarginTop: "5rem", paddingTop: "2rem", paddingBottom: "3rem" }}>
-          <div
-            style={{
-              backgroundColor: "#ffffff",
-              border: "1px solid #e2e8f0",
-              borderRadius: "1.25rem",
-              padding: "2.5rem 1.5rem",
-              textAlign: "center",
-              boxShadow: "0 2px 8px -2px rgba(15, 23, 42, 0.04)",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "1.75rem",
-                fontWeight: 800,
-                color: "#0f172a",
-                margin: "0 0 0.5rem 0",
-                letterSpacing: "-0.02em",
-              }}
-            >
-              Hit Me Up!
-            </h2>
-
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "0.75rem", marginTop: "1rem" }}>
-              <a href={`mailto:${email}`} className="btn-blue" style={{ padding: "0.65rem 1.75rem" }}>
-                {email}
-              </a>
-            </div>
           </div>
         </section>
       </main>
