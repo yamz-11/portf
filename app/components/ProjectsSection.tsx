@@ -87,7 +87,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
                 </p>
               </div>
 
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexShrink: 0 }}>
                 <span style={{ fontFamily: "monospace", fontSize: "0.75rem", color: "#94a3b8" }}>{p.year}</span>
                 <a
                   href={p.href}
@@ -98,8 +98,8 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    width: "2rem",
-                    height: "2rem",
+                    width: "2.25rem",
+                    height: "2.25rem",
                     borderRadius: "9999px",
                     backgroundColor: "#eff6ff",
                     border: "1px solid #bfdbfe",
@@ -107,6 +107,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
                     textDecoration: "none",
                     fontWeight: 700,
                     fontSize: "0.875rem",
+                    touchAction: "manipulation",
                   }}
                 >
                   ↗
